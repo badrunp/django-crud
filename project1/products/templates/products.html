@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+
+<body>
+    <h1>Products</h1>
+    {% for product in products %}
+    <ul>
+        <li>Name: {{ product.name }}</li>
+        <li>Price: {{ product.price }}</li>
+        <li>
+            <a href="update/{{ product.id }}" style="color: blue;">Update</a>
+        </li>
+        <li>
+            <a href="delete/{{ product.id }}" style="color: blue;">Delete</a>
+        </li>
+    </ul>
+    {% endfor %}
+
+    <a href="add/">Add Product</a>
+</body>
+
+</html>
